@@ -1,0 +1,100 @@
+$header-height: 100px;
+// $bgp: -210px;
+$bgp: 0;
+
+body {
+  padding-top: $header-height + 20px;
+  // padding-top: 90vh;
+
+  background-position-y: $bgp;
+}
+
+.page-header {
+  height: $header-height;
+  // background-image: url(/beran.jpg);
+  // background-size: contain;
+  // background-repeat: no-repeat;
+  // background-size: 100%;
+  // background-position-y: $bgp;
+  background-color: #000;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  color: #fff;
+  z-index: 1;
+}
+
+.post {
+  height: 500px;
+  width: 500px;
+  background-color: rgba(111, 111, 111, 0.99);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-filter: grayscale(70%);
+  transition: -webkit-filter 200ms;
+
+  &:hover, &:active {
+    -webkit-filter: grayscale(0%);
+
+  }
+
+  @media screen and (orientation: portrait) {
+    height: 80vw;
+    width: 80vw;
+  }
+  @media screen and (orientation: landscape) {
+    height: 80vh;
+    width: 80vh;
+  }
+
+}
+.post__inner {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  max-width: 80%;
+  background-color: rgba(255,255,255,0.7);
+  padding: 2rem 1rem;
+
+}
+
+.post__title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-family: Baskerville, Georgia, Garamond, serif;
+}
+
+.post__subtitle {
+  font-style: italic;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 50%;
+    border-top: 2px solid currentColor;
+    height: 1px;
+    margin: 0 auto 1rem;
+
+  }
+}
+
+.article {
+  background: #000;
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding: 1rem;
+
+  img {
+    max-width: 100%;
+  }
+}

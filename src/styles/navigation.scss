@@ -1,0 +1,36 @@
+$separator-width: 1rem;
+
+.navigation {
+  float: right;
+  text-transform: uppercase;
+
+  > ul > li {
+    float: left;
+
+    &:not(:first-of-type):before {
+      content: '|';
+      display: inline-block;
+      width: $separator-width;
+      text-align: center;
+    }
+  }
+}
+
+.opening {
+  position: relative;
+
+  &:hover, &:active {
+    
+    ul {
+      display: block;
+      width: 200%;
+    }
+  }
+
+  ul {
+    display: none;
+    position: absolute;
+    left: $separator-width;
+  }
+
+}
