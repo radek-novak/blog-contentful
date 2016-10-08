@@ -39,7 +39,7 @@ export default class Header extends Component {
                       <li><Link to="/">Hlavní</Link></li>
                       <li className="opening"><a>Kategorie</a>
                         <ul id="categories">
-                            { categoryList ? categoryList.map((cat, i) => <CatLink name={cat} key={`ctlink${i}`}/>) : 'nacitam'}
+                          { categoryList ? categoryList.map((cat, i) => <CatLink name={cat} key={`ctlink${i}`}/>) : 'nacitam'}
                         </ul>
                       </li>
                       {/* <li><a>Hledání</a></li> */}
