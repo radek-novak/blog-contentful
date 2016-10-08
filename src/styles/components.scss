@@ -16,7 +16,7 @@ body {
   // background-repeat: no-repeat;
   // background-size: 100%;
   // background-position-y: $bgp;
-  background-color: #000;
+  background-color: $bg-color;
 
   position: fixed;
   top: 0;
@@ -96,5 +96,33 @@ body {
 
   img {
     max-width: 100%;
+  }
+}
+
+.pagination {
+  color: #ccc;
+  max-width: 50%;
+  margin: 2rem auto 3rem;
+  text-align: center;
+
+  &__item {
+    $size: 2rem;
+    display: inline-block;
+    border: 1px solid transparent;
+
+    a {
+      display: inline-block;
+      width: $size;
+      height: $size;
+      line-height: $size;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &.is-active {
+      border: 1px solid #ccc;
+    }
   }
 }
