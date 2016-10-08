@@ -1,5 +1,4 @@
 "use strict";
-var webpack = require('webpack');
 var path = require('path');
 
 const HOST = process.env.HOST || "127.0.0.1";
@@ -8,7 +7,7 @@ const PORT = process.env.PORT || "8888";
 
 module.exports = {
     entry: [
-        `./src/index.js` // Your appʼs entry point
+        `./src/index.js`
     ],
     devtool: process.env.WEBPACK_DEVTOOL || 'cheap-module-source-map',
     output: {
@@ -27,7 +26,7 @@ module.exports = {
         test: /\.scss$/,
         exclude: /(node_modules|bower_components)/,
         loaders: ["style", "css", "sass"]
-      },{
+      }, {
         test: /\.json$/,
         loader: 'json'
       }]
